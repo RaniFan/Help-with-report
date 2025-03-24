@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Помощник по отчетам</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2 class="Rani">Помощник Rani</h2>
+        </header>
+        <p class="describe">Я твой помощник по отчетам, отправь мне отчет и я быстро сделаю анализ и выдам окончательные данные для отчета</p>
+
+        <div class="upload-box">
+            <input type="file" id="fileInput" accept="image/*" hidden>
+            <button type="button" id="uploadButton" class="upload-button">Загрузите файл</button>
+            <div id="previewBox"></div>
+        </div>
+
+        <div class="chat-container">
+            <div id="chatMessages" class="chat-messages"></div>
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Введите ваш запрос...">
+                <button id="sendButton">Отправить</button>
+            </div>
+        </div>
+
+        <!-- Модальное окно для API ключа -->
+        <div id="apiKeyModal" class="modal">
+            <div class="modal-content">
+                <h3>Введите ваш OpenAI API ключ</h3>
+                <input type="password" id="apiKeyInput">
+                <button id="saveApiKey">Сохранить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
